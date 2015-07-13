@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>618acf5e-4cbe-4173-8d65-527ac7bc9f03</SharedGUID>
+    <ItemsProjectGuid>{887d463f-82de-4b95-ac61-5e35a378854b}</ItemsProjectGuid>
+    <ItemsRootNamespace>JavaButton2</ItemsRootNamespace>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <ClCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp">
+      <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\BindableBase.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\DelegateCommand.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)JavaboContext.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Sound\RandomAccessReader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Sound\SoundFileReader.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Sound\XAudio2SoundPlayer.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h">
+      <DependentUpon>$(MSBuildThisFileDirectory)App.xaml</DependentUpon>
+    </ClInclude>
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\BindableBase.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DelegateCommand.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)JavaboContext.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)JavaboPageInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\DirectXSample.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\RandomAccessReader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\SoundFileReader.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\XAudio2SoundPlayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\dl_button_no_label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\java32.wav" />
+  </ItemGroup>
+</Project>

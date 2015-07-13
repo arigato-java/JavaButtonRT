@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CLCompile Include="$(MSBuildThisFileDirectory)App.xaml.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)App.xaml.h" />
+    <CLCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)JavaboContext.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\BindableBase.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Common\DelegateCommand.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Sound\RandomAccessReader.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Sound\SoundFileReader.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Sound\XAudio2SoundPlayer.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{69dcd9e5-1e18-4253-a0d0-04f8142560f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8c60bece-671a-448c-8352-493a4e7f8405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{9fc5537e-d7b7-448a-b029-f54a19cb0988}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(MSBuildThisFileDirectory)Assets\dl_button_no_label.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)Assets\java32.wav">
+      <Filter>Assets</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)JavaboPageInterface.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)JavaboContext.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\BindableBase.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common\DelegateCommand.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\RandomAccessReader.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\SoundFileReader.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\XAudio2SoundPlayer.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Sound\DirectXSample.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

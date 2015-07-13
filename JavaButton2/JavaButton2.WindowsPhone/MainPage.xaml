@@ -1,0 +1,115 @@
+﻿<Page
+    x:Class="JavaButton2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JavaButton2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+	<Grid
+		Background="White"
+		HorizontalAlignment="Stretch"
+		VerticalAlignment="Stretch">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid
+			Grid.Row="0"
+			Grid.Column="0"
+			Background="White"
+			VerticalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto" />
+				<RowDefinition Height="auto" />
+			</Grid.RowDefinitions>
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="0"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Bottom"
+				Text="あなたとJAVA,&#13;今すぐダウンロー&#13;ド"
+				Foreground="#333"
+				FontSize="36"
+				TextAlignment="Center" />
+			<Button
+				x:Name="javabotan"
+				Grid.Row="1"
+				Grid.Column="1"
+				Content="無料Javaのダウンロード"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Top"
+				ClickMode="Press"
+				FontSize="16"
+				FontWeight="Normal"
+				Width="auto"
+				Height="auto"
+				Command="{Binding javaCommand}">
+				<Button.Template>
+					<ControlTemplate TargetType="Button">
+						<Border x:Name="RootElement" CornerRadius="4" BorderThickness="2" RenderTransformOrigin="0.,0.">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal">
+										<Storyboard>
+											<DoubleAnimation Storyboard.TargetName="botan"
+															 Storyboard.TargetProperty="Opacity"
+															 To="1." Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<DoubleAnimation Storyboard.TargetName="botan"
+															 Storyboard.TargetProperty="Opacity"
+															 To="0.3" Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="PointerOver">
+										<Storyboard>
+											<DoubleAnimation Storyboard.TargetName="botan"
+															 Storyboard.TargetProperty="Opacity"
+															 To=".9" Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Focused">
+										<Storyboard>
+											<DoubleAnimation Storyboard.TargetName="botan"
+															 Storyboard.TargetProperty="Opacity"
+															 To="1." Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+									<VisualState x:Name="Unfocused">
+										<Storyboard>
+											<DoubleAnimation Storyboard.TargetName="botan"
+															 Storyboard.TargetProperty="Opacity"
+															 To="1." Duration="0:0:0.1" />
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<Border.RenderTransform>
+								<CompositeTransform TranslateX="{Binding botanTranslateX}"
+													TranslateY="{Binding botanTranslateY}"/>
+							</Border.RenderTransform>
+							<ContentPresenter Margin="36" x:Name="botan">
+							</ContentPresenter>
+							<Border.Background>
+								<ImageBrush ImageSource="Assets/dl_button_no_label.png" Stretch="Uniform"/>
+							</Border.Background>
+						</Border>
+					</ControlTemplate>
+
+				</Button.Template>
+			</Button>
+
+		</Grid>
+	</Grid>
+
+</Page>
