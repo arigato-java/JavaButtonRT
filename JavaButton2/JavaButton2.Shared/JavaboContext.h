@@ -29,7 +29,6 @@ namespace JavaButton2 {
 		size_t javaSoundIdx;
 		JavaboPageInterface^ m_page;
 		std::mutex javaSoundIndexLock;
-		int javaSoundIndex;
 		Windows::Devices::Sensors::Accelerometer^ acc;
 		Windows::Foundation::EventRegistrationToken acc_token;
 		std::shared_ptr<XAudio2SoundPlayer> m_player;

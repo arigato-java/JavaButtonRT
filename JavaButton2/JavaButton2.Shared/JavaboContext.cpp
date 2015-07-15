@@ -10,8 +10,8 @@ using namespace Windows::Foundation;
 
 JavaboContext::JavaboContext(JavaboPageInterface^ page) :
 	m_page(page),
-	javaSoundIndex(0),
-	acc(Windows::Devices::Sensors::Accelerometer::GetDefault())
+	acc(Windows::Devices::Sensors::Accelerometer::GetDefault()),
+	javaSoundIdx(0L)
 {
 	javaCommand = ref new DelegateCommand(ref new ExecuteDelegate(this, &JavaboContext::sayJava),
 		ref new CanExecuteDelegate(this, &JavaboContext::canSayJava));
@@ -61,8 +61,11 @@ JavaboContext::prepareAccelerometer() {
 
 void
 JavaboContext::sayJava(Platform::Object^ parameter) {
-	m_player->PlaySound(javaSndId[javaSoundIdx]);
-	javaSoundIdx = (javaSoundIdx + 1UL) % javaSndId.size();
+	javaSoundIndexLock.lock();
+	auto playIdx = javaSoundIdx;
+	javaSoundIdx = (playIdx + 1UL) % javaSndId.size();
+	javaSoundIndexLock.unlock();
+	m_player->PlaySound(javaSndId[playIdx]);
 }
 
 bool
