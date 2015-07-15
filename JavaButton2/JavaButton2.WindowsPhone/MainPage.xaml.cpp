@@ -26,6 +26,8 @@ using namespace concurrency;
 MainPage::MainPage()
 {
 	InitializeComponent();
+	Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences=
+		Windows::Graphics::Display::DisplayInformation::GetForCurrentView()->CurrentOrientation;
 	DataContext = ref new JavaboContext(this);
 }
 

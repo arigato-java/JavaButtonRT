@@ -24,6 +24,8 @@ using namespace Windows::UI::Xaml::Navigation;
 
 MainPage::MainPage() {
 	InitializeComponent();
+	Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences=
+		Windows::Graphics::Display::DisplayInformation::GetForCurrentView()->CurrentOrientation;
 	DataContext = ref new JavaboContext(this);
 }
 

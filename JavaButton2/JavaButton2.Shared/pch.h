@@ -8,6 +8,7 @@
 #include <collection.h>
 #include <ppltasks.h>
 #include <mutex>
+#include <complex>
 
 #include <wrl.h>
 #include <d3d11_2.h>

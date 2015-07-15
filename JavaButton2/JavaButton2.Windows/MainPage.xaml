@@ -53,7 +53,7 @@
 				Command="{Binding javaCommand}">
 				<Button.Template>
 					<ControlTemplate TargetType="Button">
-						<Border x:Name="RootElement" CornerRadius="4" BorderThickness="2" RenderTransformOrigin="0.,0.">
+						<Border x:Name="RootElement" CornerRadius="4" BorderThickness="2" RenderTransformOrigin="0.5,0.5">
 							<VisualStateManager.VisualStateGroups>
 								<VisualStateGroup x:Name="CommonStates">
 									<VisualState x:Name="Normal">
