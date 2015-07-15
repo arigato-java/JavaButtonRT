@@ -15,8 +15,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="JavaButton2_Windows.App">
-      <m2:VisualElements DisplayName="ジャバボタン" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="JavaButton2.Windows" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      <m2:VisualElements DisplayName="ジャバボタン" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="JavaButton2.Windows" ForegroundText="light" BackgroundColor="white">
+        <m2:DefaultTile Wide310x150Logo="WideLogo.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />
       </m2:VisualElements>
     </Application>
   </Applications>
