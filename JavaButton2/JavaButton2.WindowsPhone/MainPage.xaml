@@ -39,10 +39,12 @@
 				Foreground="#333"
 				FontSize="36"
 				TextAlignment="Center" />
+		</Grid>
+		<Canvas>
 			<Button
 				x:Name="javabotan"
-				Grid.Row="1"
-				Grid.Column="1"
+				Canvas.Left="{Binding botanTranslateX, Mode=TwoWay}"
+				Canvas.Top="{Binding botanTranslateY, Mode=TwoWay}"
 				Content="無料Javaのダウンロード"
 				HorizontalAlignment="Center"
 				VerticalAlignment="Top"
@@ -54,7 +56,7 @@
 				Command="{Binding javaCommand}">
 				<Button.Template>
 					<ControlTemplate TargetType="Button">
-						<Border x:Name="RootElement" CornerRadius="4" BorderThickness="2" RenderTransformOrigin="0.5,0.5">
+						<Border x:Name="RootElement" CornerRadius="4" BorderThickness="2">
 							<VisualStateManager.VisualStateGroups>
 								<VisualStateGroup x:Name="CommonStates">
 									<VisualState x:Name="Normal">
@@ -94,10 +96,6 @@
 									</VisualState>
 								</VisualStateGroup>
 							</VisualStateManager.VisualStateGroups>
-							<Border.RenderTransform>
-								<CompositeTransform TranslateX="{Binding botanTranslateX}"
-													TranslateY="{Binding botanTranslateY}"/>
-							</Border.RenderTransform>
 							<ContentPresenter Margin="36" x:Name="botan">
 							</ContentPresenter>
 							<Border.Background>
@@ -108,8 +106,7 @@
 
 				</Button.Template>
 			</Button>
-
-		</Grid>
+		</Canvas>
 	</Grid>
 
 </Page>

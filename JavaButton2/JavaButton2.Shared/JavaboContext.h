@@ -10,6 +10,7 @@ namespace JavaButton2 {
 	public ref class JavaboContext sealed: public Common::BindableBase {
 	public:
 		JavaboContext(JavaboPageInterface^ page);
+		void resetBotanPosition();
 		
 		void sayJava(Platform::Object^ parameter);
 		bool canSayJava(Platform::Object^ parameter);
@@ -24,6 +25,7 @@ namespace JavaButton2 {
 		void prepareAccelerometer();
 		void OnSuspending(Platform::Object^ sender, Windows::ApplicationModel::SuspendingEventArgs^ e);
 		void OnResuming(Object^ sender, Object^ e);
+		void botanGotoXY(double X, double Y,long long timespan);
 
 		std::vector<size_t> javaSndId;
 		size_t javaSoundIdx;

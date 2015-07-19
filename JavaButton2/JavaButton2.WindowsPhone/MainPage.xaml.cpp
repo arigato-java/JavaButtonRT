@@ -28,7 +28,11 @@ MainPage::MainPage()
 	InitializeComponent();
 	Windows::Graphics::Display::DisplayInformation::AutoRotationPreferences=
 		Windows::Graphics::Display::DisplayInformation::GetForCurrentView()->CurrentOrientation;
-	DataContext = ref new JavaboContext(this);
+	auto jbc=ref new JavaboContext(this);
+	DataContext = jbc;
+	Loaded += ref new RoutedEventHandler([=](Object ^sender, RoutedEventArgs^ args) {
+		jbc->resetBotanPosition();
+	});
 }
 
 /// <summary>
@@ -69,3 +73,7 @@ MainPage::ScreenWidth() {
 	return Window::Current->Bounds.Width;
 }
 
+Windows::UI::Xaml::DependencyObject^
+MainPage::getJavabo() {
+	return javabotan;
+}

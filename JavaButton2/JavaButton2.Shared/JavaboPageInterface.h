@@ -6,5 +6,6 @@ namespace JavaButton2 {
 		virtual double JavaboWidth() = 0;
 		virtual double ScreenHeight() = 0;
 		virtual double ScreenWidth() = 0;
+		virtual Windows::UI::Xaml::DependencyObject^ getJavabo();
 	};
 }

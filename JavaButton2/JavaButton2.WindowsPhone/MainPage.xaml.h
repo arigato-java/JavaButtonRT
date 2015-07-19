@@ -22,7 +22,7 @@ namespace JavaButton2
 		virtual double JavaboWidth();
 		virtual double ScreenHeight();
 		virtual double ScreenWidth();
-
+		virtual Windows::UI::Xaml::DependencyObject^ getJavabo();
 	protected:
 		virtual void OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs^ e) override;
 	};
