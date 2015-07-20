@@ -27,10 +27,6 @@ JavaBoBgTasks::UpdateTile() {
 		L"同意して無料ダウンロードを開始",
 		nullptr
 	};
-	static const TileTemplateType tilesizes[] = {
-		TileTemplateType::TileSquare150x150Text01,
-		TileTemplateType::TileWide310x150Text03,
-	};
 	Platform::String^ textTagName(L"text");
 	auto updater = TileUpdateManager::CreateTileUpdaterForApplication();
 	updater->EnableNotificationQueue(true);

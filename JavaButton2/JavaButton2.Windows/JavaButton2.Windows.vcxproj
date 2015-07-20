@@ -95,6 +95,9 @@
   <PropertyGroup>
     <PackageCertificateKeyFile>JavaButton2.Windows_StoreKey.pfx</PackageCertificateKeyFile>
     <PackageCertificateThumbprint>845348FB22344F7264D3C987648B7F6553CA0E76</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
