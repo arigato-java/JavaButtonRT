@@ -39,4 +39,9 @@
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Badge.scale-240.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

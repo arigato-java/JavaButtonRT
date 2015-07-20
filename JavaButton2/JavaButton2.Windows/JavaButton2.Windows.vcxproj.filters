@@ -63,16 +63,16 @@
     <Image Include="Assets\WideLogo.scale-140.png">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\Badge.scale-180.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Badge.scale-140.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Badge.scale-100.png">
+      <Filter>Assets</Filter>
+    </Image>
     <Image Include="Assets\WideLogo.scale-180.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="WideLogo.scale-100.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="WideLogo.scale-140.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="WideLogo.scale-180.png">
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>

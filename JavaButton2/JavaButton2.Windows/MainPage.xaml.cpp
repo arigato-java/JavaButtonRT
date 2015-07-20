@@ -19,6 +19,8 @@ using namespace Windows::UI::Xaml::Data;
 using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
+using namespace Windows::ApplicationModel::Background;
+using namespace concurrency;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -49,6 +51,24 @@ void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
 	// Windows::Phone::UI::Input::HardwareButtons.BackPressed event.
 	// If you are using the NavigationHelper provided by some templates,
 	// this event is handled for you.
+
+	auto reqAcc = create_task(BackgroundExecutionManager::RequestAccessAsync());
+	reqAcc.then([=](BackgroundAccessStatus accessStatus) {
+		if (accessStatus != BackgroundAccessStatus::Denied) {
+			Platform::String^ taskName = L"JavaBoBgTasks";
+			auto tasks=BackgroundTaskRegistration::AllTasks;
+			for (auto i = tasks->First(); i->HasCurrent; i->MoveNext()) {
+				if (i->Current->Value->Name == taskName) {
+					i->Current->Value->Unregister(true);
+				}
+			}
+			auto taskBuilder = ref new BackgroundTaskBuilder();
+			taskBuilder->Name=taskName;
+			taskBuilder->TaskEntryPoint = L"BackgroundTasks.JavaBoBgTasks";
+			taskBuilder->SetTrigger(ref new TimeTrigger(15,false));
+			auto registration = taskBuilder->Register();
+		}
+	});
 }
 
 double

@@ -97,6 +97,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\Badge.scale-240.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Assets\Logo.scale-240.png" />
     <Image Include="Assets\SmallLogo.scale-240.png" />
     <Image Include="Assets\Square71x71Logo.scale-240.png" />
@@ -119,6 +122,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BackgroundTasks\BackgroundTasks.WindowsPhone\BackgroundTasks.WindowsPhone.vcxproj">
+      <Project>{fc153f1b-008f-4104-b2cc-b76216034249}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

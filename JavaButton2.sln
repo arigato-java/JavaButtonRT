@@ -11,9 +11,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JavaButton2.Windows", "Java
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JavaButton2.WindowsPhone", "JavaButton2\JavaButton2.WindowsPhone\JavaButton2.WindowsPhone.vcxproj", "{26DEBE82-122C-4529-A24D-508D9E13E248}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BackgroundTasks", "BackgroundTasks", "{F9DA5AC2-AD5F-48B2-9872-0E2A8860BDA2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgroundTasks.Shared", "BackgroundTasks\BackgroundTasks.Shared\BackgroundTasks.Shared.vcxitems", "{3DE25F24-439C-4DBA-94FF-AA8C05F28706}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgroundTasks.Windows", "BackgroundTasks\BackgroundTasks.Windows\BackgroundTasks.Windows.vcxproj", "{BB162121-7925-435D-A3CC-9C95644F9C1D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BackgroundTasks.WindowsPhone", "BackgroundTasks\BackgroundTasks.WindowsPhone\BackgroundTasks.WindowsPhone.vcxproj", "{FC153F1B-008F-4104-B2CC-B76216034249}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BackgroundTasks\BackgroundTasks.Shared\BackgroundTasks.Shared.vcxitems*{3de25f24-439c-4dba-94ff-aa8c05f28706}*SharedItemsImports = 9
+		BackgroundTasks\BackgroundTasks.Shared\BackgroundTasks.Shared.vcxitems*{fc153f1b-008f-4104-b2cc-b76216034249}*SharedItemsImports = 4
 		JavaButton2\JavaButton2.Shared\JavaButton2.Shared.vcxitems*{887d463f-82de-4b95-ac61-5e35a378854b}*SharedItemsImports = 9
+		BackgroundTasks\BackgroundTasks.Shared\BackgroundTasks.Shared.vcxitems*{bb162121-7925-435d-a3cc-9c95644f9c1d}*SharedItemsImports = 4
 		JavaButton2\JavaButton2.Shared\JavaButton2.Shared.vcxitems*{26debe82-122c-4529-a24d-508d9e13e248}*SharedItemsImports = 4
 		JavaButton2\JavaButton2.Shared\JavaButton2.Shared.vcxitems*{4b6536c8-73ad-424e-b09c-5fbc65cc2300}*SharedItemsImports = 4
 	EndGlobalSection
@@ -58,6 +69,28 @@ Global
 		{26DEBE82-122C-4529-A24D-508D9E13E248}.Release|Win32.Build.0 = Release|Win32
 		{26DEBE82-122C-4529-A24D-508D9E13E248}.Release|Win32.Deploy.0 = Release|Win32
 		{26DEBE82-122C-4529-A24D-508D9E13E248}.Release|x64.ActiveCfg = Release|Win32
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Debug|ARM.Build.0 = Debug|ARM
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Debug|Win32.Build.0 = Debug|Win32
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Debug|x64.ActiveCfg = Debug|x64
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Debug|x64.Build.0 = Debug|x64
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Release|ARM.ActiveCfg = Release|ARM
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Release|ARM.Build.0 = Release|ARM
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Release|Win32.ActiveCfg = Release|Win32
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Release|Win32.Build.0 = Release|Win32
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Release|x64.ActiveCfg = Release|x64
+		{BB162121-7925-435D-A3CC-9C95644F9C1D}.Release|x64.Build.0 = Release|x64
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Debug|ARM.ActiveCfg = Debug|ARM
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Debug|ARM.Build.0 = Debug|ARM
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Debug|Win32.Build.0 = Debug|Win32
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Debug|x64.ActiveCfg = Debug|Win32
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Release|ARM.ActiveCfg = Release|ARM
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Release|ARM.Build.0 = Release|ARM
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Release|Win32.ActiveCfg = Release|Win32
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Release|Win32.Build.0 = Release|Win32
+		{FC153F1B-008F-4104-B2CC-B76216034249}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,5 +99,8 @@ Global
 		{887D463F-82DE-4B95-AC61-5E35A378854B} = {818075AA-BD5C-4BA7-9283-F9A6538AAE94}
 		{4B6536C8-73AD-424E-B09C-5FBC65CC2300} = {818075AA-BD5C-4BA7-9283-F9A6538AAE94}
 		{26DEBE82-122C-4529-A24D-508D9E13E248} = {818075AA-BD5C-4BA7-9283-F9A6538AAE94}
+		{3DE25F24-439C-4DBA-94FF-AA8C05F28706} = {F9DA5AC2-AD5F-48B2-9872-0E2A8860BDA2}
+		{BB162121-7925-435D-A3CC-9C95644F9C1D} = {F9DA5AC2-AD5F-48B2-9872-0E2A8860BDA2}
+		{FC153F1B-008F-4104-B2CC-B76216034249} = {F9DA5AC2-AD5F-48B2-9872-0E2A8860BDA2}
 	EndGlobalSection
 EndGlobal

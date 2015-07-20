@@ -152,6 +152,15 @@
     <None Include="JavaButton2.Windows_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\Badge.scale-100.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Badge.scale-140.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="Assets\Badge.scale-180.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="Assets\Logo.scale-100.png" />
     <Image Include="Assets\Logo.scale-140.png" />
     <Image Include="Assets\Logo.scale-180.png" />
@@ -166,14 +175,7 @@
     <Image Include="Assets\StoreLogo.scale-180.png" />
     <Image Include="Assets\WideLogo.scale-100.png" />
     <Image Include="Assets\WideLogo.scale-140.png" />
-    <Image Include="Assets\WideLogo.scale-180.png" />
-    <Image Include="WideLogo.scale-100.png">
-      <DeploymentContent>true</DeploymentContent>
-    </Image>
-    <Image Include="WideLogo.scale-140.png">
-      <DeploymentContent>true</DeploymentContent>
-    </Image>
-    <Image Include="WideLogo.scale-180.png">
+    <Image Include="Assets\WideLogo.scale-180.png">
       <DeploymentContent>true</DeploymentContent>
     </Image>
   </ItemGroup>
@@ -194,6 +196,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BackgroundTasks\BackgroundTasks.Windows\BackgroundTasks.Windows.vcxproj">
+      <Project>{bb162121-7925-435d-a3cc-9c95644f9c1d}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
