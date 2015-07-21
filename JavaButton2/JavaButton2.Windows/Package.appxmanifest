@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="33833JavaScriptIstNichtJa.140074C428A1E" Publisher="CN=725327B1-9E52-4EEB-86A9-65BD728EA6C9" Version="3.1.0.0" />
+  <Identity Name="33833JavaScriptIstNichtJa.140074C428A1E" Publisher="CN=725327B1-9E52-4EEB-86A9-65BD728EA6C9" Version="3.1.0.2" />
   <Properties>
     <DisplayName>ジャバボタン</DisplayName>
     <PublisherDisplayName>JavaScriptIstNichtJava</PublisherDisplayName>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="JavaButton2_Windows.App">
-      <m2:VisualElements DisplayName="ジャバボタン" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="JavaButton2.Windows" ForegroundText="dark" BackgroundColor="white">
+      <m2:VisualElements DisplayName="ジャバボタン" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="ジャバ音を発生させることができるほか、ライブタイルでジャバ格言集を表示します" ForegroundText="dark" BackgroundColor="white">
         <m2:LockScreen Notification="badgeAndTileText" BadgeLogo="Assets\Badge.png" />
         <m2:DefaultTile Wide310x150Logo="Assets\WideLogo.png">
         </m2:DefaultTile>
