@@ -68,7 +68,7 @@ void MainPage::OnNavigatedTo(NavigationEventArgs^ e)
 			auto taskBuilder = ref new BackgroundTaskBuilder();
 			taskBuilder->Name=taskName;
 			taskBuilder->TaskEntryPoint = L"BackgroundTasks.JavaBoBgTasks";
-			taskBuilder->SetTrigger(ref new TimeTrigger(720,false));
+			taskBuilder->SetTrigger(ref new TimeTrigger(15,false));
 			auto registration = taskBuilder->Register();
 		}
 	});
