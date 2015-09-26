@@ -33,6 +33,9 @@ MainPage::MainPage() {
 	Loaded += ref new RoutedEventHandler([=](Object ^sender, RoutedEventArgs^ args) {
 		jbc->resetBotanPosition();
 	});
+	SizeChanged += ref new SizeChangedEventHandler([=](Object ^sender, SizeChangedEventArgs ^e) {
+		jbc->resetBotanPosition();
+	});
 }
 
 /// <summary>
